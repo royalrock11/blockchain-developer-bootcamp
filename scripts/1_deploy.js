@@ -13,7 +13,7 @@
     // Deploy contract
   const prince = await Token.deploy('The Prince', 'Prince', '1000000')
   await prince.deployed()
-  console.log(`Prince Deployed to: ${Prince.address}`)
+  console.log(`Prince Deployed to: ${prince.address}`)
 
   const mETH = await Token.deploy('mETH', 'mETH', '1000000')
   await mETH.deployed()
