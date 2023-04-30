@@ -1,7 +1,7 @@
-import { useState, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useState, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux'
 
-import { makeBuyOrder, makeSellOrder } from "../store/interactions";
+import { makeBuyOrder, makeSellOrder } from '../store/interactions'
 
 const Order = () => {
   const [isBuy, setIsBuy] = useState(true)
@@ -52,48 +52,47 @@ const Order = () => {
           <button onClick={tabHandler} ref={sellRef} className='tab'>Sell</button>
         </div>
       </div>
-  
+
       <form onSubmit={isBuy ? buyHandler : sellHandler }>
-        <input 
-        type="text" 
-        id='amount' 
-        placeholder='0.0000' 
-        value={amount === 0 ? '' : amount}
-        onChange={(e) => setAmount(e.target.value)}
+
+        {isBuy ? (
+          <label htmlFor="amount">Buy Amount</label>
+        ) : (
+          <label htmlFor="amount">Sell Amount</label>
+        )}
+
+        <input
+            type="text"
+            id='amount'
+            placeholder='0.0000'
+            value={amount === 0 ? '' : amount}
+            onChange={(e) => setAmount(e.target.value)}
         />
 
         {isBuy ? (
-              <label htmlFor="amount">Buy Amount</label>
-            ) : (
-              <label htmlFor="amount">Sell Amount</label>
-            )}
+          <label htmlFor="price">Buy Price</label>
+        ) : (
+          <label htmlFor="price">Sell Price</label>
+        )}
 
-        <input 
-        type="text" 
-        id='price' 
-        placeholder='0.0000'
-        value={price === 0 ? '' : price}
-        onChange={(e) => setPrice(e.target.value)}
+        <input
+            type="text"
+            id='price'
+            placeholder='0.0000'
+            value={price === 0 ? '' : price}
+            onChange={(e) => setPrice(e.target.value)}
         />
-  
-        {isBuy ? (
-              <label htmlFor="price">Buy Price</label>
-            ) : (
-              <label htmlFor="price">Sell Price</label>
-            )}
-              
+
         <button className='button button--filled' type='submit'>
           {isBuy ? (
-            <span>Buy Order</span>
+              <span>Buy Order</span>
           ) : (
-            <span>Sell Order</span>
+              <span>Sell Order</span>
           )}
-
-
         </button>
-       </form>
-      </div>
-    );
-  }
-  
-  export default Order;
+      </form>
+    </div>
+  );
+}
+
+export default Order;
