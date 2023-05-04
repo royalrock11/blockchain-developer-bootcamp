@@ -56,7 +56,7 @@ const Navbar = () => {
         {account ? (
           <a
             href={config[chainId] ? `${config[chainId].explorerURL}/address/${account}` : `#`}
-            target='_top'
+            target='_blank'
             rel='noreferrer'
           >
             {account.slice(0,5) + '...' + account.slice(38,42)}
