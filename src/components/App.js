@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux';
 import config from '../config.json';
 
-import { 
+import {
   loadProvider,
   loadNetwork,
   loadAccount,
@@ -10,8 +10,6 @@ import {
   loadExchange,
   loadAllOrders,
   subscribeToEvents
-  
-
 } from '../store/interactions';
 
 import Navbar from './Navbar'
@@ -24,14 +22,13 @@ import Trades from './Trades'
 import OrderBook from './OrderBook'
 
 function App() {
-
   const dispatch = useDispatch()
 
   const loadBlockchainData = async () => {
     // Connect Ethers to blockchain
     const provider = loadProvider(dispatch)
 
-    //Fetch current network's chain chainID (example hardhat: 31337, goerli: 42)
+    // Fetch current network's chainId (e.g. hardhat: 31337, kovan: 42)
     const chainId = await loadNetwork(provider, dispatch)
 
     // Reload page when network changes
@@ -39,12 +36,12 @@ function App() {
       window.location.reload()
     })
 
-    //Fetch current account & balance from Metamask when changed
+    // Fetch current account & balance from Metamask when changed
     window.ethereum.on('accountsChanged', () => {
       loadAccount(provider, dispatch)
     })
-    
-    // Load Token Smart Contract
+
+    // Load token smart contracts
     const Prince = config[chainId].Prince
     const mETH = config[chainId].mETH
     await loadTokens(provider, [Prince.address, mETH.address], dispatch)
@@ -78,13 +75,12 @@ function App() {
 
           <Order />
 
-         
         </section>
         <section className='exchange__section--right grid'>
 
-        <PriceChart />
+          <PriceChart />
 
-        <Transactions />
+          <Transactions />
 
           <Trades />
 

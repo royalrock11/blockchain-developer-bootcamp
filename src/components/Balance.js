@@ -66,14 +66,15 @@ const Balance = () => {
     e.preventDefault()
 
     if (token.address === tokens[0].address) {
-    	transferTokens(provider, exchange, 'Withdraw', token, token1TransferAmount, dispatch)
-    	setToken1TransferAmount(0)
+      transferTokens(provider, exchange, 'Withdraw', token, token1TransferAmount, dispatch)
+      setToken1TransferAmount(0)
     } else {
-  		transferTokens(provider, exchange, 'Withdraw', token, token2TransferAmount, dispatch)
-  		setToken2TransferAmount(0)
-  	}
+      transferTokens(provider, exchange, 'Withdraw', token, token2TransferAmount, dispatch)
+      setToken2TransferAmount(0)
+    }
 
-}
+    console.log("withrawing tokens...")
+  }
 
   useEffect(() => {
     if(exchange && tokens[0] && tokens[1] && account) {
