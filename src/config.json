@@ -1,33 +1,47 @@
 {
-	"31337": {
-		"exchange": {
-			"address": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9"
-		},
-		"Prince": {
-			"address": "0x5FbDB2315678afecb367f032d93F642f64180aa3"
-		},
-		"mETH": {
-			"address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
-		},
-		"mDAI": {
-			"address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0"
-		},
-		"explorerURL": "#"
-	},
-	"11155111" : {
-		"exchange": {
-			"address": "0xaAdB332984a7A448B0B5FD92fB7C3620Fd8c25d6"
-		},
-		"Prince": {
-			"address": "0xeC32252BeBBE5E2BC4d3c4779E573B63671AAD0d"
-		},
-		"mETH": {
-			"address": "0x324efe20a268970bD28547D16930CC61410dFBc3"
-		},
-		"mDAI": {
-			"address": "0x708e21543650A1eAc3b20af09730f920Dd6986dC"
-		},
-		"explorerURL": "https://sepolia.etherscan.io/"
-	}
-
+  "31337": {
+    "exchange": {
+      "address": "0x7493e05BB535af8394c7e7ed9E49Ed91F2f9A9e1"
+    },
+    "Prince": {
+      "address": "0xeD20aA67944c569D0EB36F61dE3e100ae919D80A"
+    },
+    "mETH": {
+      "address": "0xFC150D15f904ddEe83864F03b6009270548b3142"
+    },
+    "mDAI": {
+      "address": "0x5A5F78d5202791dE66D78b6868Ddd1fAcE492c69"
+    },
+    "explorerURL": "#"
+  },
+  "11155111": {
+    "exchange": {
+      "address": "0x7493e05BB535af8394c7e7ed9E49Ed91F2f9A9e1"
+    },
+    "Prince": {
+      "address": "0xeD20aA67944c569D0EB36F61dE3e100ae919D80A"
+    },
+    "mETH": {
+      "address": "0xFC150D15f904ddEe83864F03b6009270548b3142"
+    },
+    "mDAI": {
+      "address": "0x5A5F78d5202791dE66D78b6868Ddd1fAcE492c69"
+    },
+    "explorerURL": "https://sepolia.etherscan.io/"
+  },
+  "80001": {
+    "exchange": {
+      "address": "0x7493e05BB535af8394c7e7ed9E49Ed91F2f9A9e1"
+    },
+    "Prince": {
+      "address": "0xeD20aA67944c569D0EB36F61dE3e100ae919D80A"
+    },
+    "mETH": {
+      "address": "0xFC150D15f904ddEe83864F03b6009270548b3142"
+    },
+    "mDAI": {
+      "address": "0x5A5F78d5202791dE66D78b6868Ddd1fAcE492c69"
+    },
+    "explorerURL": "https://mumbai.polygonscan.com/"
+  }
 }

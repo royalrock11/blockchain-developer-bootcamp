@@ -270,7 +270,7 @@ describe('Exchange', () => {
           await expect(exchange.connect(user1).cancelOrder(invalidOrderId)).to.be.reverted
         })
 
-        it('rejects unauthorized cancelations', async () => {
+        it('rejects unauthorized cancellations', async () => {
           await expect(exchange.connect(user2).cancelOrder(1)).to.be.reverted
         })
 
