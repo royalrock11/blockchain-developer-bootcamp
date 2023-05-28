@@ -2,6 +2,7 @@ import { useRef, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 import { myEventsSelector } from "../store/selectors";
+
 import config from "../config.json";
 
 const Alert = () => {
@@ -9,9 +10,7 @@ const Alert = () => {
 
   const network = useSelector((state) => state.provider.network);
   const account = useSelector((state) => state.provider.account);
-  const isPending = useSelector(
-    (state) => state.exchange.transaction.isPending
-  );
+  const isPending = useSelector((state) => state.exchange.transaction.isPending);
   const isError = useSelector((state) => state.exchange.transaction.isError);
   const events = useSelector(myEventsSelector);
 
@@ -51,11 +50,7 @@ const Alert = () => {
         >
           <h1>Transaction Successful</h1>
           <a
-            href={
-              config[network]
-                ? `${config[network].explorerURL}/tx/${events[0].transactionHash}`
-                : "#"
-            }
+            href={config[network] ? `${config[network].explorerURL}/tx/${events[0].transactionHash}` : "#"}
             target="_blank"
             rel="noreferrer"
           >
