@@ -11,3 +11,6 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
+This project can be seen on Fleek:
+https://still-band-4363.on.fleek.co/
+Will be pushing more updates soon...
